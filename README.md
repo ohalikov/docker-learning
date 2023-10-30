@@ -28,7 +28,7 @@
 Пишем команду:
 
     docker --version
-
+g
 Если видим ошибку:
 
     Got permission denied while trying to connect to the docker daemon socket at unix:///var/run/docker.sock: get http://%2fvar%2frun%2fdocker.sock/v1.24/version: dial unix /var/run/docker.sock: connect: permission denied
@@ -223,16 +223,16 @@ pen:
 Используем команды для поднятия контейнера
 и для того чтобы удалить контейнеры после использования.
 
-    docker-compose up
-    docker-compose down
+    docker compose up
+    docker compose down
 
 Запуск контейнера в фоновом режиме.
 
-    docker-compose up -d
+    docker compose up -d
 
 Когда мы изменили что-то в файле и нам нужно пересобрать контейнер.
 
-    docker-compose up -d --build
+    docker compose up -d --build
 
 Чтобы посмотреть логи по конкретному контейнеру необходимо
 
@@ -377,4 +377,4 @@ docker image prune -a
 
 # Поднятие из docker.hub образа
 
-docker-compose -f docker-compose.pub.yml up -d
+docker compose -f docker-compose.pub.yml up -d
